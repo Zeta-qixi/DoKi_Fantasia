@@ -111,7 +111,7 @@ class Character_Voice:
 
     def get_voice_info(self):
         
-        return voice_template.format('\n'.join([f"- {v}" for v in self.voice.values()]))
+        return voice_template.format('\n'.join([f"- [{k}]：{v}" for k,v in self.voice.items()]))
     
 
 class Character(Character_Info, Character_Story, Character_Voice):
